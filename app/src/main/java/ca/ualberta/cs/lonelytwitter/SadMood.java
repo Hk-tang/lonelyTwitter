@@ -17,7 +17,7 @@ public class SadMood extends Mood {
 
     @Override
     public String getMood() {
-        return "This is the format specific of" + getMood();
+        return "This is the format specific of" + super.getMood();
     }
 
 /*

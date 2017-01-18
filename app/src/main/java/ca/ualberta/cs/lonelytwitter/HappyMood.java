@@ -18,7 +18,7 @@ public class HappyMood extends Mood {
 
     @Override
     public String getMood() {
-        return ":)" + getMood() + ":)";
+        return ":)" + super.getMood() + ":)";
     }
 
 /*
