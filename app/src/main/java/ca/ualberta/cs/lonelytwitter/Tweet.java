@@ -52,4 +52,9 @@ public abstract class Tweet implements Tweetable{
         moodArrayList.add(mood);
     }
 
+    @Override
+    public String toString(){
+        return date.toString() + " | " + message;
+    }
+
 }
