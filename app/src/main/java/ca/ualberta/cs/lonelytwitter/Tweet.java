@@ -1,11 +1,13 @@
 package ca.ualberta.cs.lonelytwitter;
 
+import android.util.Log;
+
 import java.util.Date;
 
 /**
  * Created by romansky on 1/14/16.
  */
-public abstract class Tweet {
+public abstract class Tweet implements Comparable<Tweet>{
     protected String message;
     private Date date;
 
@@ -36,8 +38,17 @@ public abstract class Tweet {
 
     abstract public boolean isImportant();
 
+    public String getMessage(){
+        return this.message;
+    }
+
     @Override
     public String toString(){
         return date.toString() + " | " + message;
+    }
+
+    public int compareTo(Tweet tweet){
+        Log.d("tag", "compare dates");
+        return getDate().compareTo(tweet.getDate());
     }
 }
